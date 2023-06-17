@@ -1,11 +1,13 @@
-import { todoItemFactory } from './todo-item-factory';
-
 export function projectFactory(name = 'default') {
-  let items = [];
+  const items = [];
 
-  function addItem(item) {
+  function addTodoItem(item) {
     items.push(item);
   }
 
-  return { name, items, addItem };
+  function deleteTodoItem(itemIndex) {
+    items.splice(itemIndex, 1);
+  }
+
+  return { name, items, addTodoItem, deleteTodoItem };
 }
