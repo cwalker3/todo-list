@@ -146,7 +146,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.scss */ \"./src/styles/style.scss\");\n/* harmony import */ var _todo_list_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo-list.js */ \"./src/todo-list.js\");\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./storage */ \"./src/storage.js\");\n/* harmony import */ var _main_controller_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main-controller.js */ \"./src/main-controller.js\");\n/* harmony import */ var _sidebar_controller_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sidebar-controller.js */ \"./src/sidebar-controller.js\");\n/* harmony import */ var _right_panel_controller_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./right-panel-controller.js */ \"./src/right-panel-controller.js\");\n\n\n\n\n\n\n\nlet date = new Date();\ndate.toDateString;\n\nif (\n  _todo_list_js__WEBPACK_IMPORTED_MODULE_1__.todoList.getCount('', 'all') == 0 &&\n  _todo_list_js__WEBPACK_IMPORTED_MODULE_1__.todoList.getSortedTodoItems('', 'complete') == 0\n) {\n  _todo_list_js__WEBPACK_IMPORTED_MODULE_1__.todoList.createTodoItem(0, {\n    name: 'Create a task',\n    description: 'Press the plus button and create your first task.',\n  });\n}\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.scss */ \"./src/styles/style.scss\");\n/* harmony import */ var _todo_list_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo-list.js */ \"./src/todo-list.js\");\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./storage */ \"./src/storage.js\");\n/* harmony import */ var _main_controller_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main-controller.js */ \"./src/main-controller.js\");\n/* harmony import */ var _sidebar_controller_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sidebar-controller.js */ \"./src/sidebar-controller.js\");\n/* harmony import */ var _right_panel_controller_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./right-panel-controller.js */ \"./src/right-panel-controller.js\");\n/* harmony import */ var _sidebar_close_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sidebar-close.svg */ \"./src/sidebar-close.svg\");\n/* harmony import */ var _sidebar_open_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sidebar-open.svg */ \"./src/sidebar-open.svg\");\n\n\n\n\n\n\n\n\n\nlet date = new Date();\ndate.toDateString;\n\nif (\n  _todo_list_js__WEBPACK_IMPORTED_MODULE_1__.todoList.getCount('', 'all') == 0 &&\n  _todo_list_js__WEBPACK_IMPORTED_MODULE_1__.todoList.getSortedTodoItems('', 'complete') == 0\n) {\n  _todo_list_js__WEBPACK_IMPORTED_MODULE_1__.todoList.createTodoItem(0, {\n    name: 'Create a task',\n    description: 'Press the plus button and create your first task.',\n  });\n}\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
 
 /***/ }),
 
@@ -227,6 +227,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"plus .svg\";\n\n//# sourceURL=webpack://todo-list/./src/plus.svg?");
+
+/***/ }),
+
+/***/ "./src/sidebar-close.svg":
+/*!*******************************!*\
+  !*** ./src/sidebar-close.svg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"sidebar-close .svg\";\n\n//# sourceURL=webpack://todo-list/./src/sidebar-close.svg?");
+
+/***/ }),
+
+/***/ "./src/sidebar-open.svg":
+/*!******************************!*\
+  !*** ./src/sidebar-open.svg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"sidebar-open .svg\";\n\n//# sourceURL=webpack://todo-list/./src/sidebar-open.svg?");
 
 /***/ }),
 
