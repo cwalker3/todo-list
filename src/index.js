@@ -1,8 +1,19 @@
-import { todoListController } from './todo-list-controller.js';
+import css from './styles/style.scss';
+import { todoList } from './todo-list.js';
+import { storage } from './storage';
+import { mainController } from './main-controller.js';
+import { sidebarController } from './sidebar-controller.js';
+import { rightPanelController } from './right-panel-controller.js';
 
-todoListController.createTodoItem(0, { name: '1' });
-todoListController.createTodoItem(0, { name: '2' });
+let date = new Date();
+date.toDateString;
 
-todoListController.deleteTodoItem(0, 0);
-
-console.log(todoListController.projects[0].items);
+if (
+  todoList.getCount('', 'all') == 0 &&
+  todoList.getSortedTodoItems('', 'complete') == 0
+) {
+  todoList.createTodoItem(0, {
+    name: 'Create a task',
+    description: 'Press the plus button and create your first task.',
+  });
+}

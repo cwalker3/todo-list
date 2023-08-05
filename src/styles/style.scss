@@ -1,0 +1,274 @@
+@import url(~sanitize.css);
+
+:root {
+  --header-color: #060606;
+  --sidebar-color: #1e1e1e;
+  --main-color: #1e1e1e;
+  --right-panel-color: #1e1e1e;
+  --selected-color: #404040;
+  --form-color: #404040;
+
+  --bg-color-primary: #494454;
+  --bg-color-secondary: white;
+
+  --font-color-primary: white;
+  --font-color-secondary: white;
+
+  --header-height: 50px;
+  --content-height: calc(100vw - var(--header-height));
+
+  --sidebar-width: 250px;
+  --main-width: calc(500px + var(--sidebar-width));
+  --right-panel-width: 320px;
+
+  --hover-color: white;
+}
+
+body {
+  display: flex;
+  padding-top: var(--header-height);
+  height: 100vh;
+}
+
+header {
+  background-color: var(--header-color);
+  color: var(--font-color-primary);
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+
+  .sidebar-toggle {
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+    cursor: pointer;
+
+    img {
+      height: calc(var(--header-height) - 8px);
+      margin-left: 8px;
+    }
+  }
+  h1 {
+    text-align: center;
+    margin: 0 auto;
+    padding-right: var(--header-height);
+  }
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-color);
+  height: 100%;
+  overflow: auto;
+  padding: 8px 16px;
+  position: relative;
+  z-index: 1;
+  color: var(--font-color-primary);
+  border-right: 1px solid var(--header-color);
+  &.closed {
+    transform: translateX(-100%);
+    position: fixed;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 4px 8px;
+      border-radius: 10px;
+      flex-wrap: wrap;
+
+      div:first-child {
+        font-weight: bold;
+        width: 150px;
+      }
+
+      div:nth-child(2) {
+      }
+    }
+  }
+  .projects-container {
+    h2 {
+      margin-top: 32px;
+    }
+  }
+}
+
+.main {
+  background-color: var(--main-color);
+  height: 100%;
+  overflow: auto;
+  flex: 1;
+  color: var(--font-color-primary);
+  padding: 16px 16px 64px 16px;
+
+  input[type='image'] {
+    max-height: 42px;
+  }
+
+  form {
+    background-color: var(--form-color);
+    padding: 24px 48px;
+    margin: 24px 48px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-weight: bold;
+      }
+
+      #description {
+        height: 50px;
+      }
+    }
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--header-color);
+    align-items: end;
+
+    h2 {
+      margin: 0px 16px;
+    }
+
+    input {
+      margin-bottom: 4px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      border-radius: 16px;
+      border: 1px solid white;
+      flex-wrap: wrap;
+      overflow: auto;
+
+      .name {
+        width: 60%;
+      }
+
+      .date {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.right-panel {
+  background-color: var(--right-panel-color);
+  overflow: auto;
+  height: 100%;
+  z-index: 2;
+  width: 35%;
+  color: var(--font-color-primary);
+  border-left: 1px solid var(--header-color);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &.closed {
+    transform: translateX(100%);
+    position: fixed;
+    right: 0;
+  }
+
+  .top {
+    display: flex;
+    justify-items: right;
+
+    img {
+      max-width: 36px;
+    }
+  }
+
+  .middle {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      max-height: 32px;
+      cursor: pointer;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    input {
+      height: auto;
+    }
+
+    textarea {
+      height: 200px;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.selected {
+  background-color: var(--selected-color);
+  color: var(--font-color-secondary);
+}
+
+.fade-out {
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .sidebar,
+  .right-panel {
+    position: fixed;
+  }
+
+  .right-panel {
+    width: 320px;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .right-panel {
+    position: fixed;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}

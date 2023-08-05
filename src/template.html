@@ -6,6 +6,56 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-  <div class="test"></div>
+  <header>
+    <div class="sidebar-toggle">
+      <img class="close-svg" src="./images/sidebar-close.svg" alt="Close Sidebar">
+      <img class="open-svg" src="./images/sidebar-open.svg" alt="Open Sidebar">
+    </div>
+    <h1>To-do List</h1>
+  </header>
+  <div class="sidebar">
+    <ul class="time-selections">
+      <li class="selection" data-selection-type="all" data-selection="All">
+        <div>All</div> 
+      </li>
+      <li class="selection" data-selection-type="date" data-selection="Overdue">
+        <div>Overdue</div>
+      </li>
+      <li class="selection" data-selection-type="date" data-selection="Today">
+        <div>Today</div>
+      </li>
+      <li class="selection" data-selection-type="date" data-selection="Tomorrow">
+        <div>Tomorrow</div>
+      </li>
+      <li class="selection" data-selection-type="date" data-selection="Next 7 Days">
+        <div>Next 7 Days</div>
+      </li>
+      <li class="selection" data-selection-type="date" data-selection="No Due Date">
+        <div>No Due Date</div>
+      </li>
+      <li class="selection" data-selection-type="complete" data-selection="complete">
+        <div>Completed</div>
+      </li>
+    </ul>
+    <div class="projects-container">
+      <h2>Projects</h2>
+      <ul class="projects">
+      </ul>
+    </div>
+  </div>
+  <div class="main">
+
+  </div>
+  <div class="right-panel">
+    <div class="top"></div>
+    <div class="checkbox-date">
+      <input type="checkbox">
+      <input type='date' class="date">
+    </div>
+    <div class="name-description">
+      <input type="text" class="name" value="Task Name">
+      <textarea class="description">Description</textarea>
+    </div>
+  </div>
 </body>
 </html>
